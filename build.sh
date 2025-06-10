@@ -111,11 +111,11 @@ function upload_boolx_action()
 		sed -i "4i\FILE_PATH=$ziped" $upl
 		BUILDDATE=`date +"%Y-%m-%d"`
 		sed -i '5i\CAPTION="* Build Date: '$BUILDDATE'' $upl
-		sed -i '6i\* Kernel Version: v.4.14.356' $upl
-		sed -i '7i\* KSU+NEXT: v.12604' $upl
-		sed -i '8i\* SUSFS: v1.5.7' $upl
-		sed -i '9i\* Type: DSP, Mi Thermal' $upl
-		sed -i '10i\* Changes: https://github.com/onettboots/bool-x_xiaomi_raphael/commits/14-DSPcr' $upl
+		sed -i '6i\* Kernel Version: v.5.10.237' $upl
+		sed -i '7i\* KSU+NEXT: Disabled' $upl
+		sed -i '8i\* SUSFS: Disabled' $upl
+		sed -i '9i\* Type: Nethunter' $upl
+		sed -i '10i\* Changes: https://github.com/onettboots/boolx_infinix/commits/nethunter' $upl
                 sed -i '11i\* Clang: Boolx Clang 21.0.0"' $upl
                 bash $upl
 }
@@ -289,6 +289,7 @@ if [ -f $KERNEL ]; then
    echo -e "${restore}"
    build_time
    upload
+   upload_boolx_action
    echo
 else
    echo -e "${red}"
