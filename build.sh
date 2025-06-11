@@ -59,7 +59,7 @@ function makeconfig() {
 
 function build() {
 		PATH=${CLANG_BIN}:${PATH} \
-		make -j${cpus} \
+		make -s -j${cpus} \
 		LLVM=1 \
 		LLVM_IAS=1 \
 		CC="ccache clang" \
